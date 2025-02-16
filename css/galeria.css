@@ -1,0 +1,172 @@
+
+@media (min-width: 576px) /* sm */ {
+   
+}
+
+@media (min-width: 768px) /* md */ {
+  
+}
+
+@media (min-width: 992px) /* lg */ {
+
+}
+
+@media (min-width: 1200px) /* xl */ {
+ 
+}
+@media (min-width: 1400px) /* xxl */ {
+  
+}
+
+.menu-background 
+{
+    height: 200px!important;
+    background-color: var(--backgrund);
+
+
+}
+
+section
+{
+    background-color: var(--backgrund);
+    min-height: 100vh;
+}
+
+
+.form-check-input:checked {
+    background-color: var(--secondary);
+    border-color: #007bff;
+  
+}
+.form-check-input {
+  
+    cursor:pointer;
+}
+.gallery-toolbar{
+    text-align: center;
+padding: 3em 0;
+color: white;
+}
+
+/* 🔹 Galería estilo Pinterest */
+.gallery {
+    column-count: 4;
+    column-gap: 0px;
+    padding-bottom: 5em;
+}
+
+.gallery-item {
+    width: 100%;
+
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* 🔹 Lightbox Fullscreen */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1);
+    transition: opacity 0.4s ease-in-out;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+/* 🔹 Cuando el Lightbox se muestra */
+.lightbox.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    cursor:auto;
+}
+
+.lightbox.show .lightbox-img {
+    animation: zoomIn 0.4s ease-out;
+}
+
+.lightbox.closing {
+    animation: fadeOutBackground 0.4s ease-in-out;
+}
+
+.lightbox.closing .lightbox-img {
+    animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+/* 🔹 Animación para desvanecer el fondo */
+@keyframes fadeOutBackground {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* 🔹 Responsivo */
+@media (max-width: 1024px) {
+    .gallery {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        column-count: 2;
+    }
+}
