@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("📡 Datos recibidos de la API:", data);
 
             if (Object.keys(data).length === 0) {
-                console.warn("⚠️ La API no devolvió imágenes. Revisa la API en el navegador.");
+                console.warn(" La API no devolvió imágenes. Revisa la API en el navegador.");
                 return;
             }
 
@@ -22,12 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
             generateCheckboxes(Object.keys(data));
             renderImages();
         } catch (error) {
-            console.error("❌ Error cargando imágenes:", error);
+            console.error(" Error cargando imágenes:", error);
         }
     }
 
     function generateCheckboxes(folders) {
-        console.log("📂 Carpetas detectadas:", folders);
+        console.log(" Carpetas detectadas:", folders);
         galleryToolbar.innerHTML = "";
 
         folders.forEach(folder => {
@@ -53,19 +53,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function renderImages() {
-        console.log("🖼️ Rendering imágenes con filtros seleccionados...");
+        console.log(" Rendering imágenes con filtros seleccionados...");
         gallery.innerHTML = "";
 
         const selectedFolders = Array.from(document.querySelectorAll(".form-check-input:checked"))
             .map(input => input.value);
 
         if (selectedFolders.length === 0) {
-            console.log("📸 Mostrando todas las imágenes");
+            console.log(" Mostrando todas las imágenes");
             Object.keys(imageData).forEach(folder => {
                 appendImages(folder, imageData[folder]);
             });
         } else {
-            console.log("🎯 Mostrando imágenes de:", selectedFolders);
+            console.log(" Mostrando imágenes de:", selectedFolders);
             selectedFolders.forEach(folder => {
                 if (imageData[folder]) {
                     appendImages(folder, imageData[folder]);
@@ -75,13 +75,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function appendImages(folder, images) {
-        console.log(`📸 Insertando imágenes de la carpeta: ${folder}`, images);
+        console.log(` Insertando imágenes de la carpeta: ${folder}`, images);
 
         images.forEach(imageUrl => {
             let fileId = imageUrl.split("id=")[1];
             let newImageUrl = `https://lh3.googleusercontent.com/d/${fileId}`;
 
-            console.log("🔗 Nueva URL de imagen:", newImageUrl);
+            console.log(" Nueva URL de imagen:", newImageUrl);
 
             let item = document.createElement("div");
             item.classList.add("gallery-item");
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
   
-    // 🔹 Cerrar Lightbox al hacer clic fuera de la imagen
+   
     lightbox.addEventListener("click", function (event) {
         if (event.target === lightbox) {
             closeLightbox();
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
             lightbox.classList.remove("show", "closing");
             document.body.style.overflow = "auto";
-        }, 400); // Tiempo de la animación de salida
+        }, 400); 
     }
 
     fetchImages();

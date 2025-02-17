@@ -47,7 +47,7 @@
 
 .fincamexicana-container
 {
-    min-height: 100vh;
+    min-height: 90vh;
 
 }
 
@@ -55,6 +55,7 @@
 .fincamexicana-container img
 {
     width: 100%;
+    
 }
 
 
@@ -66,7 +67,7 @@
 
 .fincamexicana-container .text
 {
-  padding-top: 10vh ;
+
   text-align: right ;
   padding: 0 3em;
   border-right: var(--secondary) solid 3px;
@@ -86,7 +87,7 @@
 .servicios-container h2
 {
     text-align: center;
-   margin: 2em 0;
+   margin: 1em 0;
  
 }
 
