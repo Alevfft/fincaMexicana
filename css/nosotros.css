@@ -1,0 +1,11 @@
+
+.nosotros-section img
+{
+   width: 90%;
+}
+
+.nosotros-section .text
+{
+    text-align: right;
+    border-right: solid 4px var(--secondary);
+}

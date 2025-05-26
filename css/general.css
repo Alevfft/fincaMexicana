@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
-@media (min-width: 0px) /* xs */ {
+@media (min-width: 0px)
+/* xs */
+  {
   .margins {
-    width:90vw;
+    width: 90vw;
   }
+
   .menu-toolbar-xl {
     display: none;
   }
@@ -18,52 +21,66 @@
   }
 }
 
-@media (min-width: 576px) /* sm */ {
+@media (min-width: 576px)
+/* sm */
+  {
   .margins {
     width: 476px;
   }
 
- 
+
 
   .menu-toolbar-xl {
     display: none;
   }
+
   .menu-toolbar-xs {
     display: flex;
     background-color: #262626;
   }
 }
 
-@media (min-width: 768px) /* md */ {
+@media (min-width: 768px)
+/* md */
+  {
   .margins {
     width: 90vw;
   }
+
   body {
     font-size: 12px;
   }
 
 }
 
-@media (min-width: 992px) /* lg */ {
- 
+@media (min-width: 992px)
+/* lg */
+  {
+
   body {
     font-size: 18px;
   }
 }
 
-@media (min-width: 1200px) /* xl */ {
- 
+@media (min-width: 1200px)
+/* xl */
+  {
+
   .menu-toolbar-xl {
     display: flex;
     background: transparent;
   }
+
   .menu-toolbar-xs {
     display: none;
   }
 }
-@media (min-width: 1400px) /* xxl */ {
+
+@media (min-width: 1400px)
+/* xxl */
+  {
   .margins {
-    width:85vw;
+    width: 85vw;
   }
 }
 
@@ -74,13 +91,12 @@
   --whity: #e9eaee;
 }
 
-p
-{
-    font-size: 1em;
+p {
+  font-size: 1em;
 }
 
 html {
-  scroll-behavior:smooth;
+  scroll-behavior: auto;
   overflow-x: hidden;
 }
 
@@ -96,16 +112,22 @@ body {
   font-weight: 300;
   font-style: normal;
 }
-h1, h2 , h3 , h4 , h5 {
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
   color: var(--backgrund);
 }
 
-h1{
+h1 {
   font-size: 5em;
 }
-h2
-{
-  font-size:3em;
+
+h2 {
+  font-size: 3em;
 }
 
 header {
@@ -114,30 +136,34 @@ header {
   z-index: 999;
   position: fixed;
   background-color: transparent;
+  z-index: 1001;
 }
 
-button
-{
-  
-    padding: .8em 2em;
-    color: var(--secondary);
-    border-radius: 5px;
-   
-    
-    font-weight: 600 ;
-    background:transparent;
-    border: #d9526b solid 3px;
-    cursor: pointer;
-    transition: all 0.5s ease;
-     box-shadow:
-     7px 7px 10px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
-    outline: none;
-  
+button {
+
+  padding: .4em 1.2em;
+  color: var(--secondary);
+  border-radius: 5px;
+
+
+  font-weight: 600;
+  background: transparent;
+  border: #d9526b solid 3px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow:
+    7px 7px 10px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+  outline: none;
+
 }
 
+.section-padding {
+  min-height: 100vh;
+  padding: 10vh 5vw;
+}
 
-.background{
+.background {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -146,8 +172,7 @@ button
 
 }
 
-.margins
-{
+.margins {
   margin-left: auto;
   margin-right: auto;
 }
@@ -158,42 +183,46 @@ button
   left: 0;
   width: 100%;
   height: 100%;
-  background-color:var(--backgrund);
-  transition: top 0.3s ;
+  background-color: var(--backgrund);
+  transition: top 0.3s;
   z-index: -1;
 }
-.menu-background 
-{
-    height: 100vh;
-    display:flex;
-    width: 100%;
+
+.menu-background {
+  height: 100vh;
+  display: flex;
+  width: 100%;
 
 
 }
-.sombra-background
-{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 30%; /* Ajusta la altura */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
-    pointer-events: none;
-}
-header ul li  a{
-transition: underline 2s ease-in-out;
+
+.sombra-background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 30vh;
+  /* Ajusta la altura */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+  pointer-events: none;
+
 }
 
-header ul li  a:hover{
+header ul li a {
+  transition: underline 2s ease-in-out;
+}
+
+header ul li a:hover {
   text-decoration: underline var(--secondary);
 }
+
 .menu-toolbar-xl {
   justify-content: center;
   width: 100%;
   position: relative;
+
 }
 
-.menu-xl-logo img
-{
+.menu-xl-logo img {
   width: 14em;
   cursor: pointer;
 
@@ -204,6 +233,7 @@ header ul li  a:hover{
   display: flex;
   padding-left: 0;
 }
+
 .menu-toolbar-xl ul li {
   display: inline-block;
 }
@@ -247,7 +277,8 @@ header ul li  a:hover{
 .menu {
   position: fixed;
   top: 0;
-  right: -300px; /* Oculto fuera de la vista */
+  right: -300px;
+  /* Oculto fuera de la vista */
   width: 300px;
   height: 100%;
   background-color: var(--backgrund);
@@ -257,7 +288,8 @@ header ul li  a:hover{
 }
 
 .menu.open {
-  right: 0; /* Muestra el menú */
+  right: 0;
+  /* Muestra el menú */
 }
 
 .menu #closeMenu {
@@ -292,6 +324,7 @@ header ul li  a:hover{
 .menu ul li a:hover {
   color: #d9526b;
 }
+
 /* animaciones */
 
 header.active .header-bg {
@@ -302,44 +335,83 @@ header.inactive .header-bg {
   top: -100%;
 }
 
+section {
+  background: var(--whity);
+  width: 100%;
 
-
-
-
-
-.datos-container
-{
-    background-color: var(--secondary);
-    width: 100%;
-    color: white ;
-    padding: 2em;
-}
-
-.footer-contacto-section
-{
-    padding: 4em 0;
-    background-color: var(--primary);
-    text-align: center;
-}
-
-.footer-contacto-section button
-{
-    margin-left: auto;
-    margin-right: auto;
-    color: var(--backgrund);
-    border-color: var(--backgrund);
 }
 
 
-footer .footer-section
-{
-    background-color: var(--backgrund);
-    padding: 7em 0;
+
+
+
+.datos-container {
+  background-color: var(--secondary);
+  width: 100%;
+  color: white;
+  padding: 2em;
+}
+
+.footer-contacto-section {
+  padding: 4em 0;
+  background-color: var(--primary);
+  text-align: center;
+}
+
+.footer-contacto-section button {
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--backgrund);
+  border-color: var(--backgrund);
 }
 
 
-footer .footer-section p, footer .footer-section li, footer .footer-section label,footer .footer-section h4
-{
-    color: white;
+footer .footer-section {
+  background-color: var(--backgrund);
+  padding: 7em 0;
 }
 
+
+footer .footer-section p,
+footer .footer-section li,
+footer .footer-section label,
+footer .footer-section h4 {
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/* SUPAGES */
+
+
+.banner-background {
+
+  height: 100vh;
+  width: 100vw;
+
+  background-color: hwb(180 34% 25% / 0.5);
+  position: fixed;
+  z-index: -997;
+  top: 0;
+
+}
+
+.banner-subpaginas {
+  background-color: rgb(217, 82, 107, .5) !important;
+}
+
+
+
+.banner-background h1 {
+  padding: 40vh 0;
+  color: white;
+ 
+  font-weight: 300;
+}

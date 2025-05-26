@@ -33,13 +33,17 @@ section
 }
 
 
-.form-check-input:checked {
+.form-check
+{
+    text-align: center;
     background-color: var(--secondary);
-    border-color: #007bff;
-  
+    padding: .5em 1em .5em 2.3em;
+    border-radius: 15px;
 }
+
+
 .form-check-input {
-  
+
     cursor:pointer;
 }
 .gallery-toolbar{

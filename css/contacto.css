@@ -1,0 +1,32 @@
+
+@media (min-width: 576px) /* sm */ {
+   
+}
+
+@media (min-width: 768px) /* md */ {
+  
+}
+
+@media (min-width: 992px) /* lg */ {
+
+}
+
+@media (min-width: 1200px) /* xl */ {
+ 
+}
+@media (min-width: 1400px) /* xxl */ {
+  
+}
+
+.menu-background 
+{
+    height: 200px!important;
+    background-color: var(--backgrund);
+
+}
+
+section
+{
+    background-color: var(--backgrund);
+    min-height: 100vh;
+}
